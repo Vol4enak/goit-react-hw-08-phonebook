@@ -1,10 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import { useAuth } from 'hooks/useAuth';
 import { routsPath } from 'path/routs';
-import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-import Typed from 'typed.js';
 
 const { logIn, signUp } = routsPath;
 

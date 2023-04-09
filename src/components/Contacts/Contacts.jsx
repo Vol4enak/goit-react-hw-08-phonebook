@@ -1,6 +1,4 @@
-import { Badge } from '@mui/material';
 import { Box } from '@mui/system';
-import ContactsIcon from '@mui/icons-material/Contacts';
 import { Stack } from '@mui/system';
 import { CircularProgress } from '@mui/material';
 

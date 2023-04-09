@@ -1,9 +1,9 @@
 import { Box, Button, Typography } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
-import StarBorderPurple500TwoToneIcon from '@mui/icons-material/StarBorderPurple500TwoTone';
+import { Link,} from 'react-router-dom';
+
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone';
+
 
 import { useAuth } from 'hooks/useAuth';
 import { logOut } from 'redux/auth/operation';

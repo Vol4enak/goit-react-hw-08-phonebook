@@ -11,8 +11,9 @@ const Label = styled.label`
 `;
 
 const Form = styled.form`
-  position: sticky;
+
   display: flex;
+  margin-top: 100px;
   align-items: center;
   justify-content: center;
   flex-direction: column;

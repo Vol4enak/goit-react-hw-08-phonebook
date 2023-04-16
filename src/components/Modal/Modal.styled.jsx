@@ -25,35 +25,47 @@ const ModalBody = styled.div`
   width: 540px;
   padding: 30px 0 10px 0;
 
-  background-color: #212121;
+  background-color: #ffffffe5;
   border-radius: 20px;
   align-items: center;
 `;
 
 const Fieldset = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-around;
   align-items: center;
   width: 90%;
+  max-height: 55px;
   gap: 20px;
 
-  color: #ffff;
-  border-radius: 15px;
-  background-color: #21212191;
-  border: 1px solid #212121;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #ff9500;
+  border: 1px solid #000000;
   font-size: 18px;
 
   & span {
-    width: 27%;
+    width: 100px;
     text-align: center;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 213px;
+    height: 100%;
+    width: 1px;
+    background-color: #000000;
+    border-radius: 5px;
   }
 `;
 
 const StyledButton = styled(IconButton)`
   display: block;
   margin-top: 20px;
-  color: #fff;
+  color: #000;
 
   transition: color 150ms ease-in-out;
   &:hover {
@@ -68,7 +80,7 @@ const CloseBtn = styled(IconButton)`
 `;
 
 const Icon = styled(CloseIcon)`
-  color: #fff;
+  color: #000;
 
   transition: color 150ms ease-in-out;
   &:hover {
@@ -79,16 +91,15 @@ const Icon = styled(CloseIcon)`
 const Input = styled.input`
   width: 100%;
   height: 50px;
-  padding-left: 10px;
-  margin-bottom: 10px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   outline: yellow;
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid transparent;
   border-radius: 10px;
-  color: white;
+  color: black;
+
   padding-left: 20px;
   &:placeholder-shown &:focus,
   &:hover {
@@ -96,7 +107,7 @@ const Input = styled.input`
   }
 
   &:placeholder-shown {
-    color: white;
+    color: black;
     font-size: 14px;
     font-weight: 500;
   }

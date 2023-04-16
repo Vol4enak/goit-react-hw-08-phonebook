@@ -28,7 +28,7 @@ const ContactItem = styled.li`
     content: '';
     position: absolute;
     top: 0;
-    right: 275px;
+    right: 305px;
     height: 100%;
     width: 1px;
     background-color: #000000;
@@ -42,7 +42,7 @@ const ContactItem = styled.li`
   }
 `;
 const WrapperPhoneNumber = styled.div`
-  width: 40%;
+  width: 75%;
   text-align: center;
 `;
 
@@ -52,7 +52,6 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   width: 55%;
   gap: 10px;
-  margin-left: 120px;
   font-size: 16px;
   line-height: 1.7;
 `;

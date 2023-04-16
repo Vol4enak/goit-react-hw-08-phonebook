@@ -24,7 +24,7 @@ const ItemBar = ({ id, isOpenModal }) => {
             disabled={!isUninitialized}
             onClick={() => deleteContact(id)}
           >
-            <PersonRemoveIcon sx={{ fontSize: 24, hover: 'fill:yellow' }} />
+            <PersonRemoveIcon sx={{ fontSize: 24}} />
           </Button>
         </Tooltip>
       ) : (

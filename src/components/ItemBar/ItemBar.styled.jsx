@@ -6,6 +6,8 @@ const WrapperIcon = styled.div`
   height: 100%;
   display: flex;
   border-radius: 25px;
+  gap: 5px;
+  margin-right: 10px;
 `;
 
 const Button = muiStyled(IconButton)`
@@ -20,7 +22,9 @@ const Button = muiStyled(IconButton)`
 
   &:hover {
     background-position: right center;
-    color: ${props => props.hover};
+    background-color: rgba(0, 0, 0, 0.2);
+    color: yellow
+  };
     text-decoration: none
 `;
 

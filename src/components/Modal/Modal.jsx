@@ -91,9 +91,9 @@ const Modal = ({ id, name, number, onClose }) => {
         </AvatarBgd>
         <Fieldset
           style={{
-            border: '1px solid  rgba(255, 255, 255, 0.3)',
             padding: '15px 5px',
             marginBottom: '-20px',
+            width: '432px',
           }}
         >
           <p>{name}</p>
@@ -102,7 +102,7 @@ const Modal = ({ id, name, number, onClose }) => {
         </Fieldset>
         {isUninitialized && (
           <ArrowDownwardIcon
-            sx={{ fontSize: 80, color: '#fff', marginBottom: '-20px' }}
+            sx={{ fontSize: 80, color: '#000', marginBottom: '-20px' }}
           />
         )}
         {isLoading && (
@@ -154,9 +154,9 @@ const Modal = ({ id, name, number, onClose }) => {
                   value={formik.values.number}
                   pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                 />
-                {formik.errors.number && formik.touched.number ? (
+                {formik.values.number.length > 12 ? (
                   <span>{formik.errors.number}</span>
-                ) : null}
+                ) : console.log(123)}
               </Label>
             </Tooltip>
           </Fieldset>
@@ -180,7 +180,7 @@ const schema = yup.object().shape({
     .string()
     .matches(pattern.str, 'Name must be a string')
     .min(3, 'to short, min: 3')
-    .max(20, 'to long, max: 20'),
+    .max(16, 'to long, max: 16'),
 
   number: yup.number().typeError().moreThan(12),
 });

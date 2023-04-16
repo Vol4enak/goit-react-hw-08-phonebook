@@ -15,7 +15,7 @@ const ContactListItem = ({ id, name, number }) => {
     <>
       <ContactItem>
         <Wrapper>
-          <p>{name}</p>
+          <p style={{ maxWidth: '150px' }}>{name}</p>
         </Wrapper>
         <WrapperPhoneNumber>
           <p>{number}</p>

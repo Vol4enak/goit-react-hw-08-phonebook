@@ -2,7 +2,7 @@ import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { HelmetProvider } from 'react-helmet-async';
-import { Container } from 'components/StyledContainer/Container';
+import HexagonsGrid from 'components/HexagonsGrid/HexagonsGrid';
 import MainLayout from 'MainLayout/MainLayout';
 import { refreshUser } from 'redux/auth/operation';
 import { useAuth } from 'hooks/useAuth';
@@ -30,7 +30,7 @@ const App = () => {
   return (
     !isRefreshing && (
       <HelmetProvider>
-        <Container />
+        <HexagonsGrid />
         <Routes>
           <Route path={home} element={<MainLayout />}>
             <Route index element={<HomePage />} />

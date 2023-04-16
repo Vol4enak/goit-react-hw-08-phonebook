@@ -18,15 +18,14 @@ const Input = styled.input`
   height: 35px;
   width: 100%;
   padding-left: 15px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #ffffff;
   font-size: 16px;
   border: none;
   border-radius: 5px;
   outline: yellow;
-
+  border: 2px solid #212121;
   &:focus,
   &:hover {
-    border: 2px solid #212121;
   }
 `;
 

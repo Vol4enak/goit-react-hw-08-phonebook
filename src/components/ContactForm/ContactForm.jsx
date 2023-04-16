@@ -1,13 +1,12 @@
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import React from 'react';
-import { Label, Input, Button, Form } from './ContactForm.styled';
+import { Label, Input, Button, Form, SubTitle } from './ContactForm.styled';
 import isNewName from 'services/checkContactName';
 import {
   useAddContactMutation,
   useGetContactsQuery,
 } from 'redux/phonebook/contactsSlice.js';
-import { SubTitle } from 'components/App/App.styled';
 import { Stack } from '@mui/system';
 import { CircularProgress, Tooltip } from '@mui/material';
 

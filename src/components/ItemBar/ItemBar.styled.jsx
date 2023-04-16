@@ -5,7 +5,6 @@ import { styled as muiStyled } from '@mui/material/styles';
 const WrapperIcon = styled.div`
   height: 100%;
   display: flex;
-  background-color: #483343;
   border-radius: 25px;
 `;
 

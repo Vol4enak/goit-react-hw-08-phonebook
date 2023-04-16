@@ -11,7 +11,6 @@ const Label = styled.label`
 `;
 
 const Form = styled.form`
-
   display: flex;
   margin-top: 100px;
   align-items: center;
@@ -23,7 +22,8 @@ const Form = styled.form`
   max-height: 400px;
   gap: 30px;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid white;
+  background-color: #fffffffa;
   border-radius: 10px;
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -39,7 +39,7 @@ const Input = styled.input`
   padding-left: 10px;
   margin-bottom: 10px;
   font-size: 16px;
-  border: none;
+  border: 1px solid black;
   border-radius: 5px;
   outline: yellow;
   background-color: rgba(255, 255, 255, 0.4);
@@ -63,9 +63,9 @@ const Button = styled.button`
   padding: 8px 30px;
   background-image: linear-gradient(
     to right,
-    #fdfc47 0%,
-    #24fe41 51%,
-    #fdfc47 100%
+    #32d648 0%,
+    #24fec4 51%,
+    #00ff95 100%
   );
 
   text-align: center;
@@ -80,7 +80,7 @@ const Button = styled.button`
 
   &:hover {
     background-position: right center; /* change the direction of the change here */
-    color: #fff;
+    color: ora;
     text-decoration: none;
   }
 
@@ -91,4 +91,12 @@ const Button = styled.button`
     border: none;
   }
 `;
-export { Label, Form, Input, Button };
+
+const SubTitle = styled.h2`
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+`;
+export { Label, Form, Input, Button, SubTitle };

@@ -2,15 +2,10 @@
 
 * {
   box-sizing: border-box;
+  --v1: calc(max(9vw, 11vh));
 }
 
 body {
-  background:
-    linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0.0) 80%),
-    linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 75%);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
   margin: 0;
 
@@ -20,12 +15,77 @@ body {
 
   line-height: 1.5;
 }
-
-a.active {
-  background-color: rgba(139, 73, 170, 0.4);
-
+body::after {
+  z-index: -2;
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00ff04;
+  animation: colorChange 5s infinite alternate linear;
 }
 
+@keyframes colorChange {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.container {
+  z-index: -1;
+  position: fixed;
+  height: 100vh;
+  overflow: hidden;
+}
+.row {
+  display: inline-flex;
+  margin-top: calc(var(--v1) * -0.32);
+  margin-left: calc(var(--v1) * -0.5);
+}
+
+.hexagon {
+  position: relative;
+  width: var(--v1);
+  height: calc(var(--v1) * 1.1);
+  margin: calc(var(--v1) * 0.04) calc(var(--v1) * 0.02);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 25, 25, 0.7) 50%,
+    rgba(10, 10, 10, 0.85) 50%
+  );
+  background: rgba(15, 15, 15, 1);
+  /* optional short text */
+  text-align: center;
+  color: rgba(15, 15, 15, 1);
+  line-height: calc(var(--v1) * 1.1);
+  font-size: 2vw;
+  transition: 1s;
+}
+.row:nth-child(even) {
+  margin-left: calc(var(--v1) * 0.02);
+}
+
+.curser {
+  position: absolute;
+  width: calc(var(--v1) * 2.5);
+  height: calc(var(--v1) * 2.5);
+  border-radius: 50%;
+  animation: anim 2s linear infinite;
+  visibility: hidden;
+  /*     transition: .1s; */
+  transform: translate(-50%, -50%);
+  /*     box-shadow: 0px 0px 100px rgba(0,255,0,1); */
+}
+a.active {
+  background-color: rgba(139, 73, 170, 0.4);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

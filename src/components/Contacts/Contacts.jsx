@@ -3,7 +3,8 @@ import { Stack } from '@mui/system';
 import { CircularProgress } from '@mui/material';
 
 import { useGetContactsQuery } from 'redux/phonebook/contactsSlice';
-import { SubTitle } from 'components/App/App.styled';
+
+import { SubTitle } from 'components/ContactForm/ContactForm.styled';
 import ContactList from 'components/ContactList';
 import Filter from 'components/Filter';
 import { Form as Container } from 'components/SignUp/SignUp.styled';

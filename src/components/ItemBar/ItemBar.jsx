@@ -13,7 +13,7 @@ const ItemBar = ({ id, isOpenModal }) => {
     <WrapperIcon>
       <Tooltip title="Edit">
         <Button hover="yellow" onClick={() => isOpenModal(true)}>
-          <BorderColorIcon sx={{ fontSize: 20 }} />
+          <BorderColorIcon sx={{ fontSize: 24 }} />
         </Button>
       </Tooltip>
       {isUninitialized ? (
@@ -24,7 +24,7 @@ const ItemBar = ({ id, isOpenModal }) => {
             disabled={!isUninitialized}
             onClick={() => deleteContact(id)}
           >
-            <PersonRemoveIcon sx={{ fontSize: 20 }} />
+            <PersonRemoveIcon sx={{ fontSize: 24, hover: 'fill:yellow' }} />
           </Button>
         </Tooltip>
       ) : (

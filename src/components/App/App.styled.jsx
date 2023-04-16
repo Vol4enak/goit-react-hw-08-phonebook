@@ -24,6 +24,7 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
+  color: white;
   font-size: 28px;
   font-weight: 700;
   text-align: center;

@@ -7,26 +7,26 @@ const StyledInput = styled(TextField)({
   height: '60px',
 
   '& label': {
-    color: 'rgba(255,255,255,0.6)',
+    color: '#000',
     fontSize: 14,
   },
 
   '& label.Mui-focused': {
-    color: '#fff',
+    color: '#000',
     fontSize: 16,
   },
 
   '& .MuiInput-underline:after': {
-    borderBottomColor: '#fff',
+    borderBottomColor: '#ff9d00',
   },
 
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
-      borderColor: 'rgba(255,255,255,0.6)',
+      borderColor: '#000',
     },
 
     '&:hover fieldset': {
-      borderColor: '#fff',
+      borderColor: '#000',
     },
 
     '&.Mui-focused fieldset': {
@@ -37,7 +37,7 @@ const StyledInput = styled(TextField)({
   '& .MuiInputBase-input': {
     padding: '10px 12px',
     fontSize: 16,
-    color: '#fff',
+    color: '#000',
   },
 });
 
@@ -52,7 +52,7 @@ const StyledButton = styled(Button)({
   backgroundSize: '200% auto',
 
   backgroundImage:
-    'linear-gradient(to right, #50C9C3 0%, #96DEDA  51%, #50C9C3  100%)',
+    'linear-gradient(to right, #c9a750 0%, #dea896  51%, #c97650  100%)',
 
   '&:hover': {
     backgroundPosition: 'right center',
@@ -99,8 +99,8 @@ const Form = styled(Box)`
   flex-direction: column;
   gap: 30px;
   padding: 30px 20px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  color: black;
+  background-color: #fffffffa;
   border-radius: 10px;
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
